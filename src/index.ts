@@ -1,4 +1,9 @@
-import { createApp } from "vue";
+import {createApp} from "vue";
+
 import App from "./App.vue";
-createApp().mount(App, 'body')
+
+console.log(App);
+let root = document.createElement("div")
+document.body.append(root)
+createApp().mount(App,root)
 

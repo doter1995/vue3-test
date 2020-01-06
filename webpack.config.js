@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const VueLoaderPlugin = require("vue-loader/dist/plugin")
+const { VueLoaderPlugin } = require("vue-loader");
+
 module.exports = {
   entry: './src/index.ts',
   devtool: 'source-map',
@@ -17,6 +18,9 @@ module.exports = {
         exclude: /node_modules/,
       },
     ],
+  },
+  resolve:{
+    extensions: [".ts", ".tsx", ".js",".vue"]
   },
   plugins: [
     new VueLoaderPlugin(),
