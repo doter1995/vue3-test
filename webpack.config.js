@@ -20,7 +20,7 @@ module.exports = {
     ],
   },
   resolve:{
-    extensions: [".ts", ".tsx", ".js",".vue"]
+    extensions: [".ts", ".js",".vue"],
   },
   plugins: [
     new VueLoaderPlugin(),

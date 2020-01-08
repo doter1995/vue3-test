@@ -74,15 +74,6 @@
     "@types/webpack-sources" "*"
     source-map "^0.6.0"
 
-"@vue/compiler-core@3.0.0-alpha.0":
-  version "3.0.0-alpha.0"
-  resolved "https://registry.npm.taobao.org/@vue/compiler-core/download/@vue/compiler-core-3.0.0-alpha.0.tgz#016ebe9d36a65a909164b0ad9d48b2a5b53c99ab"
-  integrity sha1-AW6+nTamWpCRZLCtnUiypbU8mas=
-  dependencies:
-    acorn "^7.1.0"
-    estree-walker "^0.8.1"
-    source-map "^0.6.1"
-
 "@vue/compiler-core@3.0.0-alpha.1":
   version "3.0.0-alpha.1"
   resolved "https://registry.npm.taobao.org/@vue/compiler-core/download/@vue/compiler-core-3.0.0-alpha.1.tgz#963b2c19a5e882726242b32872068f6a23501cfc"
@@ -92,13 +83,6 @@
     estree-walker "^0.8.1"
     source-map "^0.6.1"
 
-"@vue/compiler-dom@3.0.0-alpha.0":
-  version "3.0.0-alpha.0"
-  resolved "https://registry.npm.taobao.org/@vue/compiler-dom/download/@vue/compiler-dom-3.0.0-alpha.0.tgz#d54ed384b5b136ac166b1b48d5a89729c760e22e"
-  integrity sha1-1U7ThLWxNqwWaxtI1aiXKcdg4i4=
-  dependencies:
-    "@vue/compiler-core" "3.0.0-alpha.0"
-
 "@vue/compiler-dom@3.0.0-alpha.1":
   version "3.0.0-alpha.1"
   resolved "https://registry.npm.taobao.org/@vue/compiler-dom/download/@vue/compiler-dom-3.0.0-alpha.1.tgz#c928dd61f42d0b90e7e9e9d1dd0e8094475a25fe"
@@ -106,13 +90,13 @@
   dependencies:
     "@vue/compiler-core" "3.0.0-alpha.1"
 
-"@vue/compiler-sfc@^3.0.0-alpha.0":
-  version "3.0.0-alpha.0"
-  resolved "https://registry.npm.taobao.org/@vue/compiler-sfc/download/@vue/compiler-sfc-3.0.0-alpha.0.tgz#f6376bca7f92421490b1e2a259e2a47f53aa3fd6"
-  integrity sha1-9jdryn+SQhSQseKiWeKkf1OqP9Y=
+"@vue/compiler-sfc@3.0.0-alpha.1":
+  version "3.0.0-alpha.1"
+  resolved "https://registry.npm.taobao.org/@vue/compiler-sfc/download/@vue/compiler-sfc-3.0.0-alpha.1.tgz#f703abcfca73d39cf79286e58b88fe1cd884967d"
+  integrity sha1-9wOrz8pz05z3kobli4j+HNiEln0=
   dependencies:
-    "@vue/compiler-core" "3.0.0-alpha.0"
-    "@vue/compiler-dom" "3.0.0-alpha.0"
+    "@vue/compiler-core" "3.0.0-alpha.1"
+    "@vue/compiler-dom" "3.0.0-alpha.1"
     consolidate "^0.15.1"
     hash-sum "^2.0.0"
     lru-cache "^5.1.1"
