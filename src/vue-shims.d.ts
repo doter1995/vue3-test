@@ -1,4 +1,5 @@
 declare module "*.vue" {
-  import * as Vue from "vue";
-  export default Vue;
+  import {Component} from "vue";
+  let component:Component;
+  export default component;
 }

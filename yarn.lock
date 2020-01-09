@@ -90,7 +90,7 @@
   dependencies:
     "@vue/compiler-core" "3.0.0-alpha.1"
 
-"@vue/compiler-sfc@3.0.0-alpha.1":
+"@vue/compiler-sfc@^3.0.0-alpha.1":
   version "3.0.0-alpha.1"
   resolved "https://registry.npm.taobao.org/@vue/compiler-sfc/download/@vue/compiler-sfc-3.0.0-alpha.1.tgz#f703abcfca73d39cf79286e58b88fe1cd884967d"
   integrity sha1-9wOrz8pz05z3kobli4j+HNiEln0=
