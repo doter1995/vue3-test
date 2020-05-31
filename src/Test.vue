@@ -16,4 +16,4 @@ export default {
   font-size: 1.8rem;
   color: red;
 }
-</style>>
+</style>

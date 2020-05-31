@@ -1,7 +1,8 @@
+const packageName = require('./package.json').name;
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { VueLoaderPlugin } = require("vue-loader");
-
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   entry: './src/index.ts',
   devtool: 'source-map',
@@ -19,13 +20,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: [{
-            loader: "style-loader" // 将 JS 字符串生成为 style 节点
-        }, {
-            loader: "css-loader" // 将 CSS 转化成 CommonJS 模块
-        }, {
-            loader: "sass-loader" // 将 Sass 编译成 CSS
-        }]
+        use: [ MiniCssExtractPlugin.loader,"css-loader","sass-loader" ]
       }
     ],
   },
@@ -33,14 +28,19 @@ module.exports = {
     extensions: [".ts", ".js",".vue"],
   },
   plugins: [
+    new MiniCssExtractPlugin({
+      filename:"styles.css"
+    }),
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Output Management'
-    })
+      title: 'Blogs'
+    }),
   ],
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    library: `${packageName}-[name]`,
+    libraryTarget: 'umd',
+    jsonpFunction: `webpackJsonp_${packageName}`,
   },
   devServer: {
     contentBase: path.join(__dirname, "dist"),
