@@ -2,10 +2,9 @@ const packageName = require('./package.json').name;
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { VueLoaderPlugin } = require("vue-loader");
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   entry: './src/index.ts',
-  devtool: 'source-map',
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {
@@ -20,7 +19,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: [ MiniCssExtractPlugin.loader,"css-loader","sass-loader" ]
+        use: [ "style-loader","css-loader","sass-loader" ]
       }
     ],
   },
@@ -28,21 +27,19 @@ module.exports = {
     extensions: [".ts", ".js",".vue"],
   },
   plugins: [
-    new MiniCssExtractPlugin({
-      filename:"styles.css"
-    }),
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       title: 'Blogs'
     }),
   ],
+  target:'web',
   output: {
     filename: 'bundle.js',
-    library: `${packageName}-[name]`,
+    library: packageName,
     libraryTarget: 'umd',
-    jsonpFunction: `webpackJsonp_${packageName}`,
   },
   devServer: {
+    publicPath: `/${packageName}/`,
     contentBase: path.join(__dirname, "dist"),
     compress: true,
     port: 1234,
